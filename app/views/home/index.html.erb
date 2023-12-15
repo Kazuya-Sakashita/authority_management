@@ -1,0 +1,26 @@
+<h1>Home#index</h1>
+<h2>この下に設定されている権限が表示されます。</h2>
+
+<!--
+<% if current_user %>
+  <p>Current User Roles:</p>
+  <% current_user.roles.each do |role| %>
+    <p><%= role.name %></p>
+  <% end %>
+<% end %>
+-->
+
+<% if @is_president %>
+  <!-- 社長の場合の表示内容 -->
+  <p>社長が設定されています。</p>
+<% end %>
+
+<% if @is_manager %>
+  <!-- 課長の場合の表示内容 -->
+  <p>課長が設定されています。</p>
+<% end %>
+
+<% if @is_member %>
+  <!-- メンバーの場合の表示内容 -->
+  <p>メンバーが設定されています。</p>
+<% end %>
